@@ -15,7 +15,7 @@ export default function useProgress(props: IProgress) {
   }, []);
   // 获取当前进度所在区间
   const current = useMemo(() => {
-    let target = [] as IStage[];
+    let target = new Array<IStage>();
     const curr = Number(amount);
     const matrix = format2Matrix(stageList);
     for (let item of matrix) {
@@ -30,13 +30,13 @@ export default function useProgress(props: IProgress) {
   }, [stageList, format2Matrix, amount]);
   // 获取激活的节点列表
   const activeList = useMemo(() => {
-    return stageList.filter((item) => item.status === StatusEnum.active);
+    return stageList.filter((item) => item.status === StatusEnum.Active);
   }, [stageList]);
   // 各个区间进度百分比
   const percentList = useMemo(() => {
     const matrix = format2Matrix(stageList);
     const curr = Number(amount);
-    const percent = [] as number[];
+    const percent = new Array<number>()
     for (let item of matrix) {
       const low = Number(item[0].threshold || 0);
       const up = Number(item[1].threshold);
@@ -53,7 +53,7 @@ export default function useProgress(props: IProgress) {
     return percent;
   }, [stageList, format2Matrix, amount]);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   return { format2Matrix, current, activeList, percentList };
 }

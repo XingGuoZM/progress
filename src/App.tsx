@@ -1,4 +1,4 @@
-import { useCallback, useState, useRef } from "react";
+import React, { useCallback, useState, useRef } from "react";
 import Progress from "./components/Progress";
 import data from "./mock/progress.js";
 
