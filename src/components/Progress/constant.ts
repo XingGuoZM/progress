@@ -1,7 +1,6 @@
-enum StatusEnum {
-  wait = "1",
-  active = "0",
-  finsish = "-1"
+export enum StatusEnum {
+  Wait = "1",
+  Active = "0",
+  Finsish = "-1"
 }
 
-export { StatusEnum };

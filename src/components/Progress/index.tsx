@@ -1,8 +1,10 @@
+import React from 'react';
 import useProgress from "./useProgress";
-
+import { IProgress } from "./types";
 import "./index.css";
 
-export default function Progress(props) {
+
+export default function Progress(props: IProgress) {
   const { stageList } = props;
   const { percentList } = useProgress(props);
   const rangeList = new Array(stageList.length).fill(100);
