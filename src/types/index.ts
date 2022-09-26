@@ -4,7 +4,7 @@ export type IStage = {
   status: string;
   threshold: string;
 };
-export interface IProgress {
+export interface IStageProgress {
   amount: string;
   stageList: IStage[];
 }

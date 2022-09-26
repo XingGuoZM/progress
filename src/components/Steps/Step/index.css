@@ -1,0 +1,14 @@
+.step-image {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.step-text {
+  text-align: center;
+  white-space: nowrap;
+}

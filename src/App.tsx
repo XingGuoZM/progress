@@ -1,5 +1,6 @@
 import React, { useCallback, useState, useRef } from "react";
 import Progress from "./components/Progress";
+import Steps from './components/Steps';
 import data from "./mock/progress.js";
 
 export default function App() {
@@ -13,9 +14,10 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ height: "20px" }}>
+    <div style={{width:'100%', height: "20px",overflow:'auto' }}>
       <Progress {...list} />
-      <button onClick={handleData}>add</button>
+      <Steps {...list} />
+      {/* <button onClick={handleData}>add</button> */}
     </div>
   );
 }
