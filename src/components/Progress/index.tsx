@@ -1,12 +1,11 @@
 import React from 'react';
-import useProgress from "./useProgress";
-import { IProgress } from "./types";
+import useStageProgress from "../../hooks/useStageProgress";
+import { IStageProgress } from "../../types";
 import "./index.css";
 
-
-export default function Progress(props: IProgress) {
+export default function Progress(props: IStageProgress) {
   const { stageList } = props;
-  const { percentList } = useProgress(props);
+  const { percentList } = useStageProgress(props);
   const rangeList = new Array(stageList.length).fill(100);
   return (
     <div className="progress-wrap">

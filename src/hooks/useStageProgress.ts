@@ -1,13 +1,13 @@
 import { useEffect, useCallback, useMemo } from "react";
-import { IStage, IProgress } from "./types";
-import { StatusEnum } from "./constant";
+import { IStage, IStageProgress } from "../types";
+import { StatusEnum } from "../constant";
 
-export default function useProgress(props: IProgress) {
+export default function useStageProgress(props: IStageProgress) {
   const { stageList, amount } = props;
   // 数据转换：对象数组 -> 区间二维数组
-  const format2Matrix = useCallback((list) => {
-    let prev = {};
-    return list.map((item, index) => {
+  const format2Matrix = useCallback((list:IStage[]) => {
+    let prev = {  id: '',text: '',status: '',threshold: '',index:-1};
+    return list.map((item:IStage, index:number) => {
       const matrixItem = [prev, item];
       prev = { ...item, index };
       return matrixItem;

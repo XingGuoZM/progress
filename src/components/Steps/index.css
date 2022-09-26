@@ -1,0 +1,6 @@
+.steps-wrap {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: -20px;
+}

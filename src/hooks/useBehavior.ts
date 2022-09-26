@@ -1,8 +1,8 @@
 import { useCallback, useMemo } from "react";
 
-import { IProgress } from "./types";
+import { IStageProgress } from "../types";
 
-export default function useBehavior(props: IProgress) {
+export default function useBehavior(props: IStageProgress) {
   const { stageList, amount } = props;
   // 节点区间展示
   const rangeList = useMemo(() => {}, []);
