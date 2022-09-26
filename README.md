@@ -1,3 +1,6 @@
+## 在线预览
+[阶段进度条](https://codesandbox.io/s/progress-m298m0?file=/src/App.tsx)
+
 ## 阶段进度条组件
 阶段进度条由3个基础组件自由组合组成，分别是时间轴（timeline），步骤条（Steps）和进度条（progress）
 

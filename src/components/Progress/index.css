@@ -1,9 +1,3 @@
-.progress-wrap {
-  width: fit-content;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
 .progress {
   width: 100%;
   height: 100%;

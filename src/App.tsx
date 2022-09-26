@@ -1,22 +1,24 @@
-import React, { useCallback, useState, useRef } from "react";
+import React from 'react';
 import Progress from "./components/Progress";
-import Steps from './components/Steps';
+import Step from "./components/Step";
+import useStageProgress from "./hooks/useStageProgress";
 import data from "./mock/progress.js";
+import "./App.css";
 
 export default function App() {
-  const [list, setList] = useState(data);
-  const amountRef = useRef<string>(data.amount);
-
-  const handleData = useCallback(() => {
-    const { stageList } = list;
-    amountRef.current = String(Number(amountRef.current) + 10);
-    setList({ stageList, amount: amountRef.current });
-  }, []);
-
+  const { stageList } = data;
+  const { percentList } = useStageProgress(data);
+  const rangeList = new Array(stageList.length).fill(90);
   return (
-    <div style={{width:'100%', height: "20px",overflow:'auto' }}>
-      <Progress {...list} />
-      <Steps {...list} />
+    <div className="stageProgress">
+      {rangeList.map((item, index) => (
+        <Step key={index} {...stageList[index]}>
+          <div className="progressWrap">
+            <Progress item={item} percent={percentList[index]} />
+          </div>
+        </Step>
+      ))}
+
       {/* <button onClick={handleData}>add</button> */}
     </div>
   );
