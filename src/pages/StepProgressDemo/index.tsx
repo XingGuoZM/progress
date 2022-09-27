@@ -20,7 +20,7 @@ export default function StepProgressDemo(){
                 </div>
                 </Step>
             ))}
-        </div>    
+        </div>
     </div>
     
 }
