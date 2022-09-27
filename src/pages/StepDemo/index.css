@@ -1,0 +1,10 @@
+.stepDemo {
+  width: 300px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.stepDemoProgress {
+  width: fit-content;
+  height: 10px;
+}
