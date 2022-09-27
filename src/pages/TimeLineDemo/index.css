@@ -1,0 +1,8 @@
+.timeLineDemo {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.timeLineBar {
+  width: 10px;
+}
