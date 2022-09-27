@@ -1,5 +1,5 @@
 .step-wrap {
-  width: 100%;
+  width: fit-content;
   position: relative;
 }
 .step {

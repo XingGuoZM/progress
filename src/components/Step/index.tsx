@@ -2,10 +2,10 @@ import React, { ReactNode } from "react";
 import "./index.css";
 
 interface IProps {
-  key: number;
+  key?: number;
   text: string;
   status: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export default function Step(props: IProps) {

@@ -1,3 +1,9 @@
+.stepProgressDemo {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
 .stageProgress {
   width: 320px;
   padding-top: 20px;
