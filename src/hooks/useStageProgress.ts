@@ -43,11 +43,11 @@ export default function useStageProgress(props: IStageProgress) {
 
       let per = (curr - low) / (up - low);
       if (per >= 1) {
-        percent.push(1);
+        percent.push(100);
       } else if (per <= 0) {
         percent.push(0);
       } else {
-        percent.push(Number(per.toFixed(3)));
+        percent.push(Number(per.toFixed(3))*100);
       }
     }
     return percent;
