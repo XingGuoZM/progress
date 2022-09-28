@@ -1,33 +1,16 @@
-import React from 'react';
+import React, { forwardRef, useRef } from 'react';
 import "./index.css";
+import { IProps } from './types';
+import useProgress from './useProgress';
 
-interface IProps{
-    total?:string;
-    percent:number;
-    direction?:'row' | 'column';
-}
+function Progress(props: IProps) {
+  const bar = useRef<HTMLDivElement>(null);
+  const { barStyle, style } = useProgress({ ...props, target: bar.current });
 
-export default function Progress(props:IProps) {
-  const { total,percent,direction = 'row' } = props;
-  if(direction==='column'){
-      return <div className="progress" style={{height:total}}>
-      <div
-        className="progress-bar"
-        style={{
-          transform: `translateY(${percent * 100 - 100}%)`
-        }}
-      />
-    </div>
-  }
-  
   return (
-    <div className="progress" style={{width:total}}>
-      <div
-        className="progress-bar"
-        style={{
-          transform: `translateX(${percent * 100 - 100}%)`
-        }}
-      />
+    <div className="progress" style={style}>
+      <div className="progress-bar" ref={bar} style={barStyle} />
     </div>
   );
 }
+export default Progress;

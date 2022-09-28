@@ -10,7 +10,7 @@ export default function StepDemo(){
         <span>步骤条Demo：</span>
         <Step {...stageList[0]}>
           <div className="stepDemoProgress">
-            <Progress total='150px' percent = {0.2}/>
+            <Progress total='150px' percent = {20}/>
           </div>
         </Step>
     </div>

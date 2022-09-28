@@ -4,3 +4,7 @@ export enum StatusEnum {
   Finsish = "-1"
 }
 
+export enum DirectionEnum {
+  Row = 'row',
+  Column = 'column'
+}
