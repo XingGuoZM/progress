@@ -5,6 +5,7 @@ export interface IProps {
     total?: string | undefined;
     strokeWidth?: string | undefined;
     percent: number;
+    className?: string;
     direction?: DirectionEnum | undefined;
     onChange?: (percent: number) => void;
 }
