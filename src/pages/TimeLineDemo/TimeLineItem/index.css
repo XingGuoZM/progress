@@ -1,0 +1,88 @@
+.timeLineItem {
+  width: 300px;
+  display: flex;
+  position: relative;
+  margin-left: -15px;
+  margin-top: -5px;
+}
+.timeLineItemIcon {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+}
+.timeLineItemTitle {
+  width: 200px;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+
+.timeLineItemPending {
+  height: 200px;
+  background-color: lightgray;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeLineItemPending::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left-width: 8px;
+  border-left-style: solid;
+  border-left-color: lightgray;
+  transform: rotateZ(180deg);
+  position: absolute;
+  left: -16px;
+  top: 10px;
+}
+.timeLineItemActive {
+  height: 400px;
+  background-color: red;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeLineItemActive::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left-width: 8px;
+  border-left-style: solid;
+  border-left-color: red;
+  transform: rotateZ(180deg);
+  position: absolute;
+  left: -16px;
+  top: 10px;
+}
+.timeLineItemDone {
+  height: 300px;
+  background-color: lightblue;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeLineItemDone::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left-width: 8px;
+  border-left-style: solid;
+  border-left-color: lightblue;
+  transform: rotateZ(180deg);
+  position: absolute;
+  left: -16px;
+  top: 10px;
+}

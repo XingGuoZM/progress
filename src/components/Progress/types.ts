@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { DirectionEnum } from "../../constant";
 
 export interface IProps {
@@ -7,6 +8,7 @@ export interface IProps {
     percent: number;
     className?: string;
     direction?: DirectionEnum | undefined;
+    children?: ReactNode;
     onChange?: (percent: number) => void;
 }
 export interface IBarStyle {

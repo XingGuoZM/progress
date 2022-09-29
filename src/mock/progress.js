@@ -1,5 +1,5 @@
 export default {
-  amount: "88",
+  amount: "58",
   stageList: [
     { id: "1", text: "阶段一", status: "-1", threshold: "100" },
     { id: "2", text: "阶段二", status: "-1", threshold: "200" },

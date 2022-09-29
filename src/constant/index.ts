@@ -1,7 +1,7 @@
 export enum StatusEnum {
-  Wait = "1",
+  Pending = "1",
   Active = "0",
-  Finsish = "-1"
+  Done = "-1"
 }
 
 export enum DirectionEnum {

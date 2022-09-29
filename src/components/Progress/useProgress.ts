@@ -3,7 +3,7 @@ import { IProps, IBarStyle, IStyle } from './types';
 import { DirectionEnum } from "../../constant";
 
 export default function useProgress(props: IProps) {
-    const { target, total = '100%', strokeWidth = '100%', percent, direction = DirectionEnum.Row, onChange } = props;
+    const { target, total, strokeWidth = '100%', percent, direction = DirectionEnum.Row, onChange } = props;
 
     const barPercent = percent >= 100 ? '0' : `${percent - 100}%`;
     const transition = 'transform 0.2s ease';

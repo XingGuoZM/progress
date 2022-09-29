@@ -5,20 +5,18 @@ import "./index.css";
 
 interface IProps {
   key?: string;
-  text: string;
-  status: string;
-  children?: ReactNode;
+  percent: number;
+  strokeWidth: string;
+  children: ReactNode;
 }
 
 export default function TimeLine(props: IProps) {
-  const { text, status, children } = props;
+  const { percent, strokeWidth, children } = props;
+
   return (
     <div className="dot-wrap">
-      <Progress className='dot-progress' direction={DirectionEnum.Column} percent={20} total='100px' strokeWidth='10px' />
-      <div className="dot">
-        <div className='dot-icon' />
-        <div className="dot-title">{text}</div>
-      </div>
+      <Progress direction={DirectionEnum.Column} percent={percent} strokeWidth={strokeWidth} />
+      {children}
     </div>
   );
 }

@@ -1,19 +1,5 @@
 .dot-wrap {
-  position: relative;
-  height: fit-content;
+  position:relative;
+  display:flex;
 }
-.dot-progress {
-}
-.dot {
-  display: flex;
-}
-.dot-icon {
-  width: 20px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 20px;
-}
-.dot-title {
-  width: 200px;
-  margin-left: 20px;
-}
+
