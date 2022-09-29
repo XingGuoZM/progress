@@ -1,12 +1,10 @@
 .dot-wrap {
   position: relative;
+  height: fit-content;
+}
+.dot-progress {
 }
 .dot {
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-  left: -50%;
-  top: -10px;
   display: flex;
 }
 .dot-icon {
