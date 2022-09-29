@@ -3,6 +3,20 @@
   display: flex;
   align-items: center;
 }
-.timeLineBar {
-  width: 10px;
+.timeLineItemWrap {
+  display: flex;
+}
+.timeLineItemBar {
+  border-radius: 10px;
+  background-color: #ebeef5;
+}
+.timeLineItemBarInner {
+  border-radius: 10px;
+  background-color: #409eff;
+}
+.timeLineItem {
+  margin-left: -15px;
+  margin-top: -5px;
+  position: relative;
+  display: flex;
 }

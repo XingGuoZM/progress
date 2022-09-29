@@ -10,7 +10,9 @@ export default function ProgressDemo() {
 
     return (<div className='progressDemo'>
         <span>进度条demo：</span>
-        <Progress total='150px' percent={percent} onChange={handleChange} strokeWidth='10px' />
+        <Progress className="progressDemoBar" barClassName="progressDemoBarInner" total='100%' strokeWidth='100%' percent={percent} onChange={handleChange}  >
+            <div style={{ position: 'absolute', top: 0, fontSize: '14px', right: '10px' }}>{`${percent}%`}</div>
+        </Progress>
         <button onClick={handleClick}>increase</button>
     </div>)
 

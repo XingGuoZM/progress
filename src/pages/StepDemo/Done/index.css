@@ -1,0 +1,20 @@
+.doneStep {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  z-index: 1;
+}
+.doneStepImage {
+  width: 50px;
+  height: 50px;
+  background-color: #67c23a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+}
+.doneStepText {
+  text-align: center;
+  white-space: nowrap;
+}
