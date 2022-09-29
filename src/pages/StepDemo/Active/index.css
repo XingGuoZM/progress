@@ -1,0 +1,20 @@
+.activeStep {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  z-index: 1;
+}
+.activeStepImage {
+  width: 50px;
+  height: 50px;
+  background-color: #409eff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+}
+.activeStepText {
+  text-align: center;
+  white-space: nowrap;
+}

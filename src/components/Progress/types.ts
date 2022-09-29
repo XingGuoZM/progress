@@ -7,6 +7,7 @@ export interface IProps {
     strokeWidth?: string | undefined;
     percent: number;
     className?: string;
+    barClassName?: string;
     direction?: DirectionEnum | undefined;
     children?: ReactNode;
     onChange?: (percent: number) => void;

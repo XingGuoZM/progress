@@ -4,7 +4,15 @@
   display: flex;
   align-items: center;
 }
-.stepDemoProgress {
-  width: fit-content;
+.stepItemWrap {
+  position: relative;
+}
+.stepItemBar {
+  border-radius: 10px;
+  background-color: #ebeef5;
+}
+.stepItemBarInner {
   height: 10px;
+  border-radius: 10px;
+  background-color: #409eff;
 }
