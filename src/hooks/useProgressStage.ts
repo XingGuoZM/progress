@@ -2,12 +2,12 @@ import { useEffect, useCallback, useMemo } from "react";
 import { IStage, IStageProgress } from "../types";
 import { StatusEnum } from "../constant";
 
-export default function useStageProgress(props: IStageProgress) {
+export default function useProgressStage(props: IStageProgress) {
   const { stageList, amount } = props;
   // 数据转换：对象数组 -> 区间二维数组
-  const format2Matrix = useCallback((list:IStage[]) => {
-    let prev = {  id: '',text: '',status: '',threshold: '',index:-1};
-    return list.map((item:IStage, index:number) => {
+  const format2Matrix = useCallback((list: IStage[]) => {
+    let prev = { id: '', text: '', status: '', threshold: '', index: -1 };
+    return list.map((item: IStage, index: number) => {
       const matrixItem = [prev, item];
       prev = { ...item, index };
       return matrixItem;
@@ -47,7 +47,7 @@ export default function useStageProgress(props: IStageProgress) {
       } else if (per <= 0) {
         percent.push(0);
       } else {
-        percent.push(Number(per.toFixed(3))*100);
+        percent.push(Number(per.toFixed(3)) * 100);
       }
     }
     return percent;

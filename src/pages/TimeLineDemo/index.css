@@ -3,6 +3,16 @@
   display: flex;
   align-items: center;
 }
+.timeLineListWrap {
+  width: 300px;
+  height: 500px;
+  overflow-y: scroll;
+}
+.timeLineList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 .timeLineItemWrap {
   display: flex;
 }
