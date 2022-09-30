@@ -4,10 +4,10 @@ import StepDemo from './pages/StepDemo';
 import TimeLineDemo from './pages/TimeLineDemo';
 
 export default function App() {
- 
-  return (<div>
-      <ProgressDemo />    
-      <StepDemo/>
-      <TimeLineDemo/>
+
+   return (<div>
+      <ProgressDemo />
+      <StepDemo />
+      <TimeLineDemo />
    </div>);
 }
